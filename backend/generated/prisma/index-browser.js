@@ -24,12 +24,12 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 7.7.0
- * Query Engine version: 75cbdc1eb7150937890ad5465d861175c6624711
+ * Prisma Client JS version: 7.8.0
+ * Query Engine version: 3c6e192761c0362d496ed980de936e2f3cebcd3a
  */
 Prisma.prismaVersion = {
-  client: "7.7.0",
-  engine: "75cbdc1eb7150937890ad5465d861175c6624711"
+  client: "7.8.0",
+  engine: "3c6e192761c0362d496ed980de936e2f3cebcd3a"
 }
 
 Prisma.PrismaClientKnownRequestError = () => {
@@ -120,6 +120,11 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
+exports.Prisma.CategoryScalarFieldEnum = {
+  id: 'id',
+  name: 'name'
+};
+
 exports.Prisma.TaskScalarFieldEnum = {
   id: 'id',
   title: 'title',
@@ -129,14 +134,13 @@ exports.Prisma.TaskScalarFieldEnum = {
   categoryId: 'categoryId'
 };
 
-exports.Prisma.CategoryScalarFieldEnum = {
-  id: 'id',
-  name: 'name'
-};
-
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
+};
+
+exports.Prisma.categoryOrderByRelevanceFieldEnum = {
+  name: 'name'
 };
 
 exports.Prisma.NullsOrder = {
@@ -144,19 +148,15 @@ exports.Prisma.NullsOrder = {
   last: 'last'
 };
 
-exports.Prisma.TaskOrderByRelevanceFieldEnum = {
+exports.Prisma.taskOrderByRelevanceFieldEnum = {
   title: 'title',
   description: 'description'
 };
 
-exports.Prisma.CategoryOrderByRelevanceFieldEnum = {
-  name: 'name'
-};
-
 
 exports.Prisma.ModelName = {
-  Task: 'Task',
-  Category: 'Category'
+  category: 'category',
+  task: 'task'
 };
 
 /**
